@@ -6,9 +6,9 @@
   "scripts": {
     "watch": "supervisor -w metalsmith.js -e js,md -n exit node metalsmith",
     "watchStyles": "supervisor -w styles -e scss -n exit node styles",
-    "metalsmith": "node html",
+    "metalsmith": "node metalsmith",
     "styles": "node styles",
-    "build": "npm run styles && npm run html",
+    "build": "npm run styles && npm run metalsmith",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sam Deere / colophonemes",

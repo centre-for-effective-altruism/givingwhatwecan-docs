@@ -6,6 +6,10 @@ menuOrder: 2
 
 Content for the Giving What We Can site is written in Markdown, which is a simple way to use symbols to format a plain-text document. It means that you can write content in any text editor.
 
+### HTML
+
+
+
 ### Footnotes
 
 If you want to add footnotes to the Markdown, use the [Pandoc footnote syntax](http://pandoc.org/README.html#footnotes):

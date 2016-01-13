@@ -102,15 +102,19 @@ var M = new Metalsmith(__dirname)
     }))
     .use(logMessage('Built HTML files from layouts'))
     .use(logMessage('Starting watcher...',chalk.green))
-    .use(
-		watch({
-			paths: {
-				"${source}/**/*": "**/*",
-				"layouts/**/*": "**/*",
-			}
-		})
-	)
-    .build(function(err,files){
+    ;
+    if(process.env.NODE_ENV==='development'){
+	    M.use(
+			watch({
+				paths: {
+					"${source}/**/*": "**/*",
+					"layouts/**/*": "**/*",
+				}
+			})
+		)
+    }
+
+    M.build(function(err,files){
     	if(err){
     		console.log(err)
     	} else {
