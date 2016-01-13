@@ -1,0 +1,41 @@
+{
+  "name": "givingwhatwecan-docs",
+  "version": "0.1.0",
+  "description": "Documentation for www.givingwhatwecan.org",
+  "main": "index.js",
+  "scripts": {
+    "watch": "supervisor -w metalsmith.js -e js,md -n exit node metalsmith",
+    "watchStyles": "supervisor -w styles -e scss -n exit node styles",
+    "metalsmith": "node html",
+    "styles": "node styles",
+    "build": "npm run styles && npm run html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam Deere / colophonemes",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "bootstrap-sass": "^3.3.6",
+    "browserify": "^13.0.0",
+    "chalk": "^1.1.1",
+    "clean-css": "^3.4.9",
+    "contentful-metalsmith": "https://github.com/centre-for-effective-altruism/contentful-metalsmith.git",
+    "dotenv": "^1.2.0",
+    "jade": "^1.11.0",
+    "markdown-it": "^5.1.0",
+    "merge": "^1.2.0",
+    "metalsmith": "^2.1.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-layouts": "^1.4.2",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-navigation": "^0.2.5",
+    "metalsmith-permalinks": "^0.4.1",
+    "metalsmith-relative": "^1.0.3",
+    "metalsmith-watch": "^1.0.1",
+    "minimatch": "^3.0.0",
+    "moment": "^2.11.1",
+    "node-sass": "^3.4.2"
+  }
+}

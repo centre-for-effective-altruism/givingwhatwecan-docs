@@ -1,0 +1,10 @@
+h3.sidebar-title Contents
+ul.sidebar-menu.list-unstyled
+	each entry in navigation.main
+		li.sidebar-menu-item
+			a(href=relative(entry.path))!= entry.file.title
+			if entry.children
+				ul.sidebar-menu-children
+					each child in entry.children
+						li.sidebar-menu-child
+							a(href=relative(child.path))!= child.file.title

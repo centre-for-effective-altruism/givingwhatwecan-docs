@@ -1,0 +1,61 @@
+html,body {
+    height:100%;
+}
+body {
+	padding-top: 68px;
+}
+p,li {
+	font-weight: 200;
+	strong {
+		font-weight: 400;
+	}
+}
+h1,h2,h3,h4,h5,h6 {
+	color: $site-primary;
+}
+// don't line-wrap code blocks
+pre {
+    overflow-x: auto;
+}
+pre code {
+    word-wrap: normal;
+    white-space: pre;
+}
+// don't use a spinner for number inputs 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+figure {
+	margin: $grid-gutter-width 0;
+}
+
+// nested ordered lists
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+
+  &:before {
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: 0.6em;
+  }
+}
+
+li ol > li {
+  margin: 0;
+
+  &:before {
+    content: counters(item, ".") " ";
+  }
+}

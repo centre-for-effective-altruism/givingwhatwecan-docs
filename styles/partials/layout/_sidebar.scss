@@ -1,0 +1,17 @@
+.sidebar {
+    background-color: #333;
+    width: $sidebar-width;
+    margin: 0 0 $footer-height;
+    overflow-y: scroll;
+    position: absolute;
+    padding: $grid-gutter-width;
+    top: 0;
+    bottom: 0;
+    a {
+    	color: #FFF;
+    }
+    .sidebar-title {
+        margin-top: 0;
+        color: #FFF;
+    }
+}

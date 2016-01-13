@@ -1,0 +1,52 @@
+doctype
+html.no-js
+	head
+		//- Set vars
+		- var titleTag = (path ==='./' ? site.title : title + ' — ' + site.title)
+		- var pageURL = site.url + (path==="./" ? '' : '/'+path)
+		//- Meta
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name="robots", content="noindex")
+		title!= titleTag
+		link(rel="canonical" href=pageURL)
+		//- Stylesheet
+		- var stylesheetURL = process.env.NODE_ENV === "production" ? '/styles/styles.min.css' : '/styles/styles.css';
+		link(rel='stylesheet', href=stylesheetURL)
+		//- favicons
+		include favicons
+		//- block for additional header details
+		block head
+body
+	.wrapper
+		include nav
+		.sidebar
+			include sidebar
+		.contents
+			.container
+				h1.page-title!= title
+				noscript
+					.row
+						.col-xs-12
+							div.alert.alert-warning
+								p 
+									i.fa.fa-warning
+									|  You do not have Javascript enabled. Some elements of this website may not work correctly.
+				block content
+					div!= contents
+		//-footer
+		footer.footer
+			.container
+				.row
+					.col-sm-12
+						p
+							| Giving What We Can is part of the Centre for Effective Altruism is a registered charity in England and Wales, Registered Charity Number 1149828.
+						p
+							| &copy; Centre For Effective Altruism
+
+
+	//- before final </body> tag
+	- var scriptsURL = process.env.NODE_ENV === "production" ? '/scripts/app.min.js' : '/scripts/app.js';
+	script(src=scriptsURL)
+	block scripts
