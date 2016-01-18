@@ -52,7 +52,14 @@ If your content is not in Markdown format, you'll need to convert it.
 
 ### Google Docs
 
-The most common scenario is that the content is written as a Google Doc. Fortunately, we've built a converter
+The most common scenario is that the content is written as a Google Doc. Fortunately, we've built a converter, currently available at [https://colophonemes.github.io/sanitise-google-doc/](https://colophonemes.github.io/sanitise-google-doc/).
+
+You will need to be signed into a Google account that has access to the document you're trying to convert.
+
+- Make sure the 'Markdown' checkbox is selected
+- Click on the 'Open Google Doc' button. You may need to search for the title of your document
+- Select the document from the list
+- The Markdown should appear at the bottom of the page. Copy and paste it into Contentful
 
 #### Making the most of the converter
 
