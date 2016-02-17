@@ -12,7 +12,7 @@ There are a number of template tags that you can use to
 Add a Table of Contents to a page. 
 
 ```
-{% include specials.toc %}}
+{% include specials.toc %}
 ```
 
 This is generated from the heading tags (e.g. `<h2>`,`<h3>` etc). You should always start your headings at Heading 2 (`<h2>` or `##` in Markdown). Headings will nest under each other (so, a Heading 3 nests under Heading 2).
