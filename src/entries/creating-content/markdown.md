@@ -6,9 +6,28 @@ menuOrder: 2
 
 Content for the Giving What We Can site is written in Markdown, which is a simple way to use symbols to format a plain-text document. It means that you can write content in any text editor.
 
+### Images
+
+You should import all images into the Contentful Media library (instructions [here](/creating-content/contentful)). You can then insert these using the `Insert Media` button at the top of the `Body` field of any entry in Contentful.
+
+```
+![Image alt text](//images.contentful.com/abc123/987xyz/image.jpg)
+```
+
+#### Image Captions
+
+To add a caption to an image, don't leave a space between the image tag and the next line of text:
+
+```
+![Image alt text](//images.contentful.com/abc123/987xyz/image.jpg)
+Figure 1: This text will be added to the 
+
+This is the next paragraph.
+```
+
 ### HTML
 
-
+You can use valid HTML in Contentful. This is useful if you wish to add `class` or other attributes to your HTML tags, complex tables etc. In most cases it's possible to achieve what you want to do without resorting to adding HTML code, so prefer a Markdown-only solution.
 
 ### Footnotes
 
@@ -76,5 +95,13 @@ Any images that you want to add to the content should be added using the [normal
 
 Sometimes the document you want to convert will already have inline images. When you convert it, the Markdown will contain links to these images, hosted on Google's servers. You should get rid of these links, and replace them with links to a version of the image hosted on Contentful. It's tempting to skip this step (because, when you preview the page, everything looks fine), but you shouldn't — images hosted on Google will not benefit from the image optimisations that happen to those hosted on Contentful, which will slow the page down significantly for people accessing your content on a mobile device.
 
+**Easily download all images from a Google Doc **
+
+- In the Google Doc, select the _File -> Download As -> Web Page (HTML, zipped)_
+- Unzip the `.zip` file that downloads
+- In Contentful, go to the Media Library, click _Add New Asset -> Multiple Assets_. A file picker dialogue wil appear
+- Drag and drop the files from the `.zip` file that you downloaded from Google, or click _Choose Files_ and browse to the folder. Use `Shift+Click` to select all the images
+- Several new images should appear in the Contentful Media Library, currently marked as _Draft_. Edit each of these images with a descriptive title, and _Publish_ them.
+- In the Contentful Entry, replace any references to the Google-hosted version of the image (e.g. replace links that look like `![](xx.googleusercontent.com/abc123_xyz789.jpg)` with the [corresponding image from the Contentful Media Library](#images))
 
 
